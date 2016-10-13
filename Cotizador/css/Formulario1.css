@@ -1,0 +1,536 @@
+﻿         .dxeEditAreaSys {
+        }
+
+        .auto-style1 {
+            height: 33px;
+        }
+
+        body {
+            margin: 0;
+           
+           }
+
+        .letra {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .letraTitulo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .outer-container {
+            position: absolute;
+            display: table;
+ 
+            width: 100%;
+            height: 100%;
+            background: #fff;
+    top: 0px;
+    left: 0px;
+}
+.bkground {
+     background-image: url("http://testcotizador.unitypromotores.com/Cotizador/imagenes/FondoCarro.jpg"); 
+}
+
+        .inner-container {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background-image: url("http://testcotizador.unitypromotores.com/Cotizador/imagenes/FondoCarro.jpg")  ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+       
+
+        }
+                ul {
+  text-align: left;
+      list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0
+}
+                    ul li {
+                    
+     list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0
+                    }
+
+  
+
+ .cuadro {
+     width:100%;
+     height:150%;
+}
+
+        .centered-content {
+            display: inline-block;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        .centered-content tr{
+             width:100%;
+        }
+
+        .centered-content td{
+             width:100%;
+        }
+
+
+        .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            color: #ffffff;
+            /*-webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;*/
+            /*font-family: Arial;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;*/
+        }
+
+            .btn:hover {
+                background: #3cb0fd;
+                background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+                color: blue;
+                /*text-decoration: none;*/
+            }
+
+        .auto-style2 {
+            width: 14px;
+            height: 14px;
+        }
+
+        #Page_Control {
+            height: 577px;
+        }
+
+        .auto-style5 {
+            width: 252px;
+        }
+
+
+        .cal {
+            position: relative;
+            padding: 4px;
+            font-weight: bold;
+            background: #bebfc0;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: baseline;
+            zoom: 1;
+            *display: inline;
+            *vertical-align: auto;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+        }
+
+            .cal:before {
+                content: '';
+                position: absolute;
+                bottom: 3px;
+                left: 4px;
+                right: 4px;
+                height: 6px;
+                background: #d9d9d9;
+                border: 1px solid #909090;
+                border-radius: 4px;
+                -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+
+            .cal a {
+                text-decoration: none;
+            }
+
+            .cal tr:first-child td {
+                border-top: 0;
+            }
+
+            .cal td:first-child {
+                border-left: 0;
+            }
+
+            .cal tr:first-child a {
+                border-top: 0;
+                margin-top: 0;
+            }
+
+            .cal tr:last-child a {
+                border-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            .cal td:first-child a {
+                border-left: 0;
+                margin-left: 0;
+            }
+
+            .cal td:last-child a {
+                border-right: 0;
+                margin-right: 0;
+            }
+
+            .cal tr:last-child td:first-child a {
+                border-radius: 0 0 0 3px;
+            }
+
+            .cal tr:last-child td:last-child a {
+                border-radius: 0 0 3px 0;
+            }
+
+        .cal-table {
+            position: relative;
+            margin: 0 0 1px;
+            border-collapse: separate;
+            border-left: 1px solid #979797;
+            border-right: 1px solid #979797;
+            border-bottom: 1px solid #bbb;
+            border-radius: 0 0 3px 3px;
+            -webkit-box-shadow: 1px 0 rgba(0, 0, 0, 0.1), -1px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 0 rgba(0, 0, 0, 0.1), -1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .cal-caption {
+            width: 100%;
+            padding-bottom: 1px;
+            line-height: 32px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+            background: #629c2e;
+            border-radius: 3px 3px 0 0;
+            background-image: -webkit-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+            background-image: -moz-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+            background-image: -o-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+            background-image: linear-gradient(to bottom, #89c84d, #629c2e 75%, #548d20);
+            -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.1), inset 0 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.1), inset 0 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+            .cal-caption a {
+                line-height: 30px;
+                padding: 0 10px;
+                font-size: 20px;
+                font-weight: normal;
+                color: white;
+            }
+
+            .cal-caption .prev {
+                float: left;
+            }
+
+            .cal-caption .next {
+                float: right;
+            }
+
+        .cal-body td {
+            width: 30px;
+            font-size: 11px;
+            border-top: 1px solid #eaeaea;
+            border-left: 1px solid #eaeaea;
+            border-color: black;
+        }
+
+        .cal-body a {
+            display: block;
+            position: relative;
+            line-height: 28px;
+            color: #555;
+            text-align: center;
+            background: white;
+        }
+
+            .cal-body a:hover {
+                background: #fafafa;
+            }
+
+        .cal-off a {
+            color: #ccc;
+            font-weight: normal;
+        }
+
+        .cal-today a {
+            color: green;
+            background: #f5f5f5;
+            background-image: -webkit-linear-gradient(top, whitesmoke, white 70%);
+            background-image: -moz-linear-gradient(top, whitesmoke, white 70%);
+            background-image: -o-linear-gradient(top, whitesmoke, white 70%);
+            background-image: linear-gradient(to bottom, whitesmoke, white 70%);
+        }
+
+        .cal-selected a, .cal-body a:active {
+            margin: -1px;
+            color: #b2494d;
+            background: #fff5f6;
+            border: 1px solid #e7d4d4;
+        }
+
+        .cal-check a {
+            color: #f79901;
+            overflow: hidden;
+        }
+
+            .cal-check a:before {
+                content: '';
+                position: absolute;
+                top: -6px;
+                right: -6px;
+                width: 12px;
+                height: 12px;
+                background: #ffb83b;
+                background-image: -webkit-linear-gradient(top, #ffb83b, #ff6c00);
+                background-image: -moz-linear-gradient(top, #ffb83b, #ff6c00);
+                background-image: -o-linear-gradient(top, #ffb83b, #ff6c00);
+                background-image: linear-gradient(to bottom, #ffb83b, #ff6c00);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+        .auto-style6 {
+            height: 19px;
+        }
+
+        .auto-style7 {
+            height: 39px;
+        }
+
+        .f0 {
+font-size: 0px;
+}
+.f1
+{
+ font-size:12px;
+}
+.f2
+{
+ font-size: 21px;
+}
+.f3
+{
+font-size: small;
+}
+.f4
+{
+ font-size: 15px;
+}
+.f5
+{
+font-size: 16px;
+}
+
+.divX {
+     float:left; text-align:right; overflow-x:auto;
+        }
+
+@media screen and (max-device-height: 150px){
+ .f1{font-size:96px;}
+ .f2{font-size:168px;}
+ .f3{font-size:168px;}
+ .f4{font-size:120px;}
+ .f5{font-size:128px;}
+
+        #Principal {
+                  height:100%;
+                  width:100%;   
+                  left:0;        
+        }
+
+        .centered-content table tr td{
+            text-align:center;
+             width:100%;
+             height:100%;
+        }
+        .cuadro {
+            width:100%;
+            height:100%;
+        }
+        .cuadro Image {
+            width:100%;
+            height:100%;
+        }
+        body {
+           zoom:150%;
+        }
+ }
+
+@media screen and (max-width: 400px){
+ .f1{font-size:96px;}
+ .f2{font-size:168px;}
+ .f3{font-size:168px;}
+ .f4{font-size:120px;}
+ .f5{font-size:128px;}
+
+        #Principal {
+                  height:100%;
+                  width:100%;   
+                  left:0;        
+        }
+
+         .centered-content table {
+         left:250px;
+        }
+
+        .centered-content table tr td{
+            text-align:center;
+             width:100%;
+             height:100%;
+        }
+        .cuadro {
+            width:100%;
+            height:100%;
+        }
+        .cuadro Image {
+            width:100%;
+            height:100%;
+        }
+        body {
+           zoom:100%;
+        }
+ }
+
+
+@media screen and (max-width: 500px){
+ .f1{font-size:96px;}
+ .f2{font-size:168px;}
+ .f3{font-size:168px;}
+ .f4{font-size:120px;}
+ .f5{font-size:128px;}
+
+        #Principal {
+                  height:100%;
+                  width:100%;   
+                  left:20%;        
+        }
+
+         .centered-content table {
+         left:250px;
+        }
+
+        .centered-content table tr td{
+            text-align:center;
+             width:100%;
+             height:100%;
+        }
+        .cuadro {
+            width:100%;
+            height:100%;
+        }
+        .cuadro Image {
+            width:100%;
+            height:100%;
+        }
+       
+
+ }
+
+@media screen and (max-width: 700px){
+ .f1{font-size:96px;}
+ .f2{font-size:168px;}
+ .f3{font-size:168px;}
+ .f4{font-size:120px;}
+ .f5{font-size:128px;}
+
+        #Principal {
+                  height:100%;
+                  width:100%;   
+                  left:20%;        
+        }
+
+
+         .centered-content table {
+         left:250px;
+        }
+
+        .centered-content table tr td{
+            text-align:center;
+             width:100%;
+             height:100%;
+        }
+        .cuadro {
+            width:100%;
+            height:100%;
+        }
+        .cuadro Image {
+            width:100%;
+            height:100%;
+        }
+       
+
+ }
+
+@media screen and (max-width: 800px){
+ .f1{font-size:96px;}
+ .f2{font-size:168px;}
+ .f3{font-size:168px;}
+ .f4{font-size:120px;}
+ .f5{font-size:128px;}
+
+        #Principal {
+                  height:100%;
+                  width:100%;   
+                  left:20%;    
+        }
+
+ 
+        .centered-content table tr td{
+             text-align:center;
+             width:100%;
+             height:100%;
+        }
+        .cuadro {
+            width:100%;
+            height:100%;
+        }
+        .cuadro Image {
+            width:100%;
+            height:100%;
+        }
+        
+
+}
+
+@media screen and (max-width: 1000px){
+.f0 {font-size: 0px;}
+.f1 { font-size:12px;}
+.f2{ font-size: 21px;}
+.f3{font-size: small;}
+.f4{ font-size: 15px;}
+.f5{font-size: 16px;}
+
+
+}
+
+@media screen and (max-width: 1200px){
+.f0 {font-size: 0px;}
+.f1 { font-size:12px;}
+.f2{ font-size: 21px;}
+.f3{font-size: small;}
+.f4{ font-size: 15px;}
+.f5{font-size: 16px;}
+
+
+       
+}
