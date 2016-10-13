@@ -283,7 +283,7 @@ namespace Cotizador
              List<CorreosInternos> correo = new List<CorreosInternos>();
              correo = Cotizadores.EnviarCorreosInternos("Codisa");
              string lineaTitulo = this.txtNombre.Text + " Tel: " + this.txtTelefono.Text + " Correo: " + this.txtCorreo.Text;
-          
+             
              if (correo.Count != 0)
              {
                  foreach (var item in correo)
