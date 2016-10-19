@@ -9,7 +9,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="https://www.google-analytics.com/analytics.js" ></script>
-    <link rel="stylesheet" type="text/css" href="http://testcotizador.unitypromotores.com/Cotizador/css/Formulario1.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cotizador.unitypromotores.com/Cotizador/css/Formulario1.css"/>
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
     <title>Cotizador Unity Promotores</title>
     <!-- Google Analytics -->
@@ -40,7 +40,7 @@
            <tr><td>&nbsp;</td></tr>
            <tr><td>&nbsp;</td></tr>
            <tr><td>&nbsp;</td></tr>
-           <tr><td style="text-align:left; float:left;"><asp:Image ID="Image2" CssClass="cuadro" runat="server" Height="226px" ImageUrl="http://testcotizador.unitypromotores.com/Cotizador/imagenes/LogoBlancoUnityPromotores.png" Width="317px" /></td></tr>
+           <tr><td style="text-align:left; float:left;"><asp:Image ID="Image2" CssClass="cuadro" runat="server" Height="226px" ImageUrl="http://cotizador.unitypromotores.com/Cotizador/imagenes/LogoBlancoUnityPromotores.png" Width="317px" /></td></tr>
        </table>
      
 
@@ -72,7 +72,7 @@
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden; ">
                                                                                                         <asp:TextBox ID="txtNombre" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"   AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errNombre" style="visibility: hidden" /></td>
+                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errNombre" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -101,7 +101,7 @@
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden; ">
                                                                                                         <asp:TextBox ID="txtApellido" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"   AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errApellido" style="visibility: hidden" /></td>
+                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errApellido" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -130,7 +130,7 @@
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;   text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                         <asp:HiddenField ID="HiddenField1" runat="server" />
                                                                                                         <input id="nacimiento" type="date" onchange="LlenarFecha()" />
-                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errFecha" style="visibility: hidden" /></td>
+                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errFecha" style="visibility: hidden" /></td>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                             </table>
@@ -151,7 +151,7 @@
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;   text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtCorreo" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px" AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                         </td><td class="auto-style8">&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errCorreo" style="visibility: hidden" /></td>
+                                                                                                         </td><td class="auto-style8">&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errCorreo" style="visibility: hidden" /></td>
                                                                                                 
                                                                                                 </tr>
                                                                                             </table>
@@ -178,7 +178,7 @@
                                                                                     <tr>
                                                                                         <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                      <asp:TextBox ID="txtTelefono" runat="server" CssClass="dxeEditArea dxeEditAreaSys"  onkeypress="return isNumberKey(event)" Width="193px" MaxLength="8" AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errTelefono" style="visibility: hidden" /></td>
+                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errTelefono" style="visibility: hidden" /></td>
 
                                                                                         </td>
                                                                                     </tr>
@@ -233,7 +233,7 @@
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif; text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtMarca" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"  AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMarca" style="visibility: hidden" /></td>
+                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMarca" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -253,7 +253,7 @@
                                                                                 <table id="ASPxPageControl1_ASPxPageControl2_sexo" cellpadding="0" cellspacing="0" class="f1" style="border: 1px solid rgb(159, 159, 159); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal;   line-height: normal; font-family: Tahoma, Geneva, sans-serif; cursor: default; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: auto; height: 15px; border-collapse: separate;">
                                                                                     <tr>
                                                                                        <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
-                                                                                         <table><tr><td><asp:TextBox ID="txtLinea" runat="server" CssClass="dxeEditArea dxeEditAreaSys"   Width="193px" AutoCompleteType="Disabled"></asp:TextBox> </td><td><img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errLinea" style="visibility: hidden" /></td></tr></table> 
+                                                                                         <table><tr><td><asp:TextBox ID="txtLinea" runat="server" CssClass="dxeEditArea dxeEditAreaSys"   Width="193px" AutoCompleteType="Disabled"></asp:TextBox> </td><td><img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errLinea" style="visibility: hidden" /></td></tr></table> 
                                                                                           </td>
                                                                                     </tr>
                                                                                 </table>
@@ -277,7 +277,7 @@
                                                                             <td class="f1" style="font-family: Arial, Helvetica, sans-serif; text-align: left; float:left; height: 24px;">
 
                                                                                       <table><tr><td style="text-align:left;"><asp:RadioButton ID="rdSeguroCompleto" runat="server"  Text="Seguro Completo" ClientIDMode="Static" onclick="MostrarMonto()" CssClass="letra" /></td>
-                                                                                          <td><img class="auto-style2" id="errDañosATerceros" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png"  style="visibility: hidden"/></td>
+                                                                                          <td><img class="auto-style2" id="errDañosATerceros" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png"  style="visibility: hidden"/></td>
                                                                                           </tr></table>
 
                                                                             </td>
@@ -287,7 +287,7 @@
  
                                                                                      <table><tr><td style="text-align:left;">
                                                                                            <asp:RadioButton ID="rdResponsabilidadCivil" runat="server"  Text="Responsabilidad Civil" ClientIDMode="Static" onclick="EsconderMonto()" CssClass="letra"  />
-                                                                                                <td><img class="auto-style2" id="errResponsabilidadCivil" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" style="visibility: hidden" /></td>
+                                                                                                <td><img class="auto-style2" id="errResponsabilidadCivil" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" style="visibility: hidden" /></td>
                                                                                           </tr></table>
  
                                                                             </td>
@@ -315,7 +315,7 @@
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif; text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtValorMercado" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px" onkeypress="return isNumberKey(event)" AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMontoAsegurado" style="visibility: hidden" /></td>
+                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMontoAsegurado" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -367,7 +367,7 @@
                                                                                                 <tr>
                                                                                                     <td class="dxic" style="font-family: Arial, Helvetica, sans-serif; font-size: 0px; text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtValorEstimadoRoboParcial" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px" onkeypress="return isNumberKey(event)" AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errRoboParcial" style="visibility: hidden" /></td>
+                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errRoboParcial" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -416,15 +416,16 @@
                                                                         </tr>--%>
                  <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
-                                                                                        <a  class="letraTitulo">Como desea ser contactado?
+                                                                                       <a  class="letraTitulo"> Chat de 8:00 am a 5:00 pm <br />
+                                                                                          <a  class="letraTitulo">Como desea ser contactado?
                                                                                        
                                                                                     </td>
                                                                         </tr>
                          <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
                                                                                         <asp:CheckBox ID="chkChat" runat="server" Text="Chat" /> 
-                                                                                        &nbsp;&nbsp; <img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk1" style="visibility: hidden" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:CheckBox ID="chkTelefono" runat="server" Text="Telefono" />
-                                                                                        <img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk2" style="visibility: hidden" /></td>
+                                                                                        &nbsp;&nbsp; <img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk1" style="visibility: hidden" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:CheckBox ID="chkTelefono" runat="server" Text="Telefono" />
+                                                                                        <img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk2" style="visibility: hidden" /></td>
                                                                         </tr>
                          <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
@@ -447,7 +448,7 @@
                                                                    <asp:ListItem>4 PM</asp:ListItem>
                                                                    <asp:ListItem>5 PM</asp:ListItem>
                                                                                         </asp:DropDownList>
-                                                                                      &nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errHora" style="visibility: hidden" /></td>
+                                                                                      &nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errHora" style="visibility: hidden" /></td>
                                                                         </tr>
          
                                                                         <tr>
@@ -496,7 +497,7 @@
     <li></li>
     <li></li>
     <li></li>
-    <li><div class="cuadro" style="text-align:right;"><asp:Image ID="Image5" CssClass="cuadro" runat="server" Height="94px" ImageUrl="http://testcotizador.unitypromotores.com/Cotizador/imagenes/logo_fogel.png" Width="200px" /></div></li> 
+    <li><div class="cuadro" style="text-align:right;"><asp:Image ID="Image5" CssClass="cuadro" runat="server" Height="94px" ImageUrl="http://cotizador.unitypromotores.com/Cotizador/imagenes/logo_fogel.png" Width="200px" /></div></li> 
        </ul>
     </div>
     

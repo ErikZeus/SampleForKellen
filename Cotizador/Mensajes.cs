@@ -37,6 +37,12 @@ namespace Cotizador
             Correo enviando = new Correo();
             StringBuilder msg = Cotizar.ObtieneMensaje(MensajeTipo);
             msg.Append("Valor Prima " + valorprima);
+            msg.Append("");
+            msg.Append("");
+            msg.Append("Atentamente,");
+            msg.Append("");
+            msg.Append("Departamento de Lineas Personales");
+
             string titulo = "Cotización de Seguro para " + TipoDeVehiculo + " " + Marca + " " + Modelo + " " + Linea;
             enviando.EnviarCorreo(Correo, msg, Nombre, MensajeTipo, archivo, titulo, Paso1, Paso2,Paso3, Link1, Link2, Link3);
             EnvioDeCorreoRapido.LimpiarArchivo(archivo);

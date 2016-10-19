@@ -19,12 +19,12 @@ namespace Cotizador
             }
             catch (Exception)
             {
-                Response.Redirect("http://testcotizador.unitypromotores.com/Cotizador/SinConexion.aspx");
+                Response.Redirect("http://cotizador.unitypromotores.com/Cotizador/SinConexion.aspx");
             }
 
             if (Id == "")
             {
-                Response.Redirect("http://testcotizador.unitypromotores.com/Cotizador/SinConexion.aspx");
+                Response.Redirect("http://cotizador.unitypromotores.com/Cotizador/SinConexion.aspx");
             }
 
         }

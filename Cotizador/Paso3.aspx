@@ -7,7 +7,7 @@
     <title>Cotización El Roble</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://testcotizador.unitypromotores.com/Cotizador/css/Formulario1.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cotizador.unitypromotores.com/Cotizador/css/Formulario1.css"/>
 <style type="text/css">
     .centro {
     display: inline-block; 
@@ -77,7 +77,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden; ">
                                                                                                         <asp:TextBox ID="txtNit" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"   AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errNit" style="visibility: hidden" /></td>
+                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errNit" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -106,7 +106,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden; ">
                                                                                                         <asp:TextBox ID="txtDPI" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"   AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDpi" style="visibility: hidden" /></td>
+                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDpi" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -135,7 +135,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden; ">
                                                                                                         <asp:TextBox ID="txtPasaporte" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"   AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDpi" style="visibility: hidden" /></td>
+                                                                                                       </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDpi" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>
@@ -164,7 +164,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif;   text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtDireccion" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px" AutoCompleteType="Disabled"></asp:TextBox>  
-                                                                                                         </td><td class="auto-style8">&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDireccion" style="visibility: hidden" /></td>
+                                                                                                         </td><td class="auto-style8">&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errDireccion" style="visibility: hidden" /></td>
                                                                                                 
                                                                                                 </tr>
                                                                                             </table>
@@ -191,7 +191,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                     <tr>
                                                                                         <td class="f0" style="font-family: Arial, Helvetica, sans-serif;  text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                      <asp:TextBox ID="txtZona" runat="server" CssClass="dxeEditArea dxeEditAreaSys"  onkeypress="return isNumberKey(event)" Width="193px" MaxLength="8" AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errZona" style="visibility: hidden" /></td>
+                                                                                                         </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errZona" style="visibility: hidden" /></td>
 
                                                                                         </td>
                                                                                     </tr>
@@ -223,7 +223,7 @@ text-transform: none;">Ultimo Paso </span>&nbsp;</div>
                                                                                                 <tr>
                                                                                                     <td class="f0" style="font-family: Arial, Helvetica, sans-serif; text-align: center; width: 142px; padding: 3px 3px 2px; overflow: hidden;">
                                                                                                     <asp:TextBox ID="txtMunicipio" runat="server" CssClass="dxeEditArea dxeEditAreaSys" Width="193px"  AutoCompleteType="Disabled"></asp:TextBox> 
-                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://testcotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMunicipio" style="visibility: hidden" /></td>
+                                                                                                </td><td>&nbsp;&nbsp;<img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errMunicipio" style="visibility: hidden" /></td>
                                                                                                 </tr>
                                                                                             </table>
                                                                                         </td>

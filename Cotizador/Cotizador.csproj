@@ -200,6 +200,7 @@
   <ItemGroup>
     <Content Include="ASR27.xlsx" />
     <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\catalogo.sql" />
     <Content Include="bin\Microsoft.ReportViewer.Common.dll" />
     <Content Include="bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
     <Content Include="bin\Microsoft.ReportViewer.WebForms.DLL" />
@@ -979,7 +980,6 @@
     <Content Include="Rpt7.aspx" />
     <Content Include="SinConexion.aspx" />
     <Content Include="Agradecimiento.aspx" />
-    <Content Include="bin\catalogo.sql" />
     <Content Include="bin\Cotizadores.dll" />
     <Content Include="bin\Cotizadores.pdb" />
     <Content Include="bin\datePicker.dll" />
