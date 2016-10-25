@@ -36,13 +36,13 @@ namespace Cotizador
             Cotizadores Cotizar = new Cotizadores();
             Correo enviando = new Correo();
             StringBuilder msg = Cotizar.ObtieneMensaje(MensajeTipo);
-            msg.Append("Valor Prima " + valorprima);
-            msg.Append("Valor Prima " + valorprima);
-            msg.Append(Environment.NewLine);
-            msg.Append(Environment.NewLine);
-            msg.Append("Atentamente,");
-            msg.Append(Environment.NewLine);
-            msg.Append("Departamento de Lineas Personales");
+            msg.Append("<font style='font - family:Calibri; font - size:medium;'>Valor Prima " + valorprima + "</font>");
+            msg.Append(" <br />");
+            msg.Append("<br />");
+            msg.Append("<font style='font - family:Calibri; font - size:medium; '>Atentamente,</font>");
+            msg.Append("<br />");
+            msg.Append("<font style='font - family:Calibri; font - size:medium; '>Departamento de Lineas Personales </font>");
+
 
             string titulo = "Cotización de Seguro para " + TipoDeVehiculo + " " + Marca + " " + Modelo + " " + Linea;
             enviando.EnviarCorreo(Correo, msg, Nombre, MensajeTipo, archivo, titulo, Paso1, Paso2,Paso3, Link1, Link2, Link3);

@@ -1115,6 +1115,43 @@ namespace Cotizador
 
             return resultado;
         }
+
+        public static decimal ObtieneValor_DeducibleMinimoParcial(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoParcial from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+        public static decimal ObtieneValor_DeducibleMinimoRobo(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoRobo from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+
         public static decimal ObtieneValor_deducible_parcial(string Codigo)
         {
             decimal resultado = 0;
@@ -1146,6 +1183,12 @@ namespace Cotizador
             string MayorMenor = "";
             decimal Porcentaje = 0;
             string _tipo_vehiculo = "";
+            decimal DeducibleMinimoRobo = Cotizadores.ObtieneValor_DeducibleMinimoRobo(CodigoEmpresa);
+
+            if (DeducibleMinimoRobo > _SumaAsegurada)
+            {
+                return DeducibleMinimoRobo * porcentaje_general;
+            }
 
             DataTable content = new DataTable();
             content = AccesoDatos.RegresaTablaMySql("Select Año, MayorMenor, Porcentaje, TipoVehiculo from maestro_reglasdevehiculos where Marca = '" + codigo_marca + "' and upper(linea) = upper('" + linea + "')");
@@ -1604,8 +1647,18 @@ namespace Cotizador
             decimal PorcenajeGastosPorEmision = Cotizadores.ObtieneValor_GastosEmision(_Codigo);
             decimal Mensualidades = Cotizadores.ObtieneValor_Mensualidades(_Codigo);
 
+            decimal DeducibleMinimoParcial = Cotizadores.ObtieneValor_DeducibleMinimoParcial(_Codigo);
             deducible_parcial = Cotizadores.ObtieneValor_deducible_parcial(_Codigo);
-            deducible_parcial = _SumaAsegurada * deducible_parcial;
+
+            if (DeducibleMinimoParcial > _SumaAsegurada)
+            { deducible_parcial = DeducibleMinimoParcial * deducible_parcial; }
+            else
+            {
+                deducible_parcial = _SumaAsegurada * deducible_parcial;
+            }
+
+
+
             deducible_robo_total = _RoboTotal;
 
             Codigo = _Codigo;
