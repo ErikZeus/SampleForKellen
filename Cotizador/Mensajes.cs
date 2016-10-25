@@ -37,10 +37,11 @@ namespace Cotizador
             Correo enviando = new Correo();
             StringBuilder msg = Cotizar.ObtieneMensaje(MensajeTipo);
             msg.Append("Valor Prima " + valorprima);
-            msg.Append("");
-            msg.Append("");
+            msg.Append("Valor Prima " + valorprima);
+            msg.Append(Environment.NewLine);
+            msg.Append(Environment.NewLine);
             msg.Append("Atentamente,");
-            msg.Append("");
+            msg.Append(Environment.NewLine);
             msg.Append("Departamento de Lineas Personales");
 
             string titulo = "Cotización de Seguro para " + TipoDeVehiculo + " " + Marca + " " + Modelo + " " + Linea;

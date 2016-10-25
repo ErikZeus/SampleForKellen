@@ -16,6 +16,10 @@
             font-size: 12px;
             height: 28px;
         }
+        .auto-style9 {
+            font-size: 15px;
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -399,19 +403,19 @@
                                                                         </tr>--%>
                  <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
-                                                                                         <a  class="letraTitulo"> Chat de 8:00 am a 5:00 pm <br />
-                                                                                         <a  class="letraTitulo">Como desea ser contactado?
+                                                                                        <a  class="letraTitulo">Como desea ser contactado?
                                                                                        
                                                                                     </td>
                                                                         </tr>
                          <tr>
-                                                                                    <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
+                                                                                    <td class="auto-style9" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
                                                                                         <asp:CheckBox ID="chkChat" runat="server" Text="Chat" /> 
                                                                                         &nbsp;&nbsp; <img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk1" style="visibility: hidden" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:CheckBox ID="chkTelefono" runat="server" Text="Telefono" />
                                                                                         <img alt="" class="auto-style2" src="http://cotizador.unitypromotores.com/Cotizador/imagenes/Error.png" id="errChk2" style="visibility: hidden" /></td>
                                                                         </tr>
                          <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
+                                                                                        <a  class="letraTitulo"> Chat de 8:00 am a 5:00 pm <br />
                                                                                         <a  class="letraTitulo">En qué horario desea ser contactado?
                                                                                        
                                                                                     </td>

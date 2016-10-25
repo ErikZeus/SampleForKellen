@@ -416,8 +416,8 @@
                                                                         </tr>--%>
                  <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
-                                                                                       <a  class="letraTitulo"> Chat de 8:00 am a 5:00 pm <br />
-                                                                                          <a  class="letraTitulo">Como desea ser contactado?
+                                                                                   
+                                                                                         <a  class="letraTitulo">Como desea ser contactado?
                                                                                        
                                                                                     </td>
                                                                         </tr>
@@ -429,7 +429,8 @@
                                                                         </tr>
                          <tr>
                                                                                     <td class="f4" style="font-family: Roboto;  text-align: left; color: rgb(19, 27, 77); text-decoration: none; font-weight: normal; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-transform: none;">
-                                                                                        <a  class="letraTitulo">En qué horario desea ser contactado?
+     <a  class="letraTitulo"> Chat de 8:00 am a 5:00 pm <br />                                                                                  
+      <a  class="letraTitulo">En qué horario desea ser contactado?
                                                                                        
                                                                                     </td>
                                                                         </tr>
