@@ -43,7 +43,6 @@ namespace Cotizador
             msg.Append("<br />");
             msg.Append("<font style='font - family:Calibri; font - size:medium; '>Departamento de Lineas Personales </font>");
 
-
             string titulo = "Cotización de Seguro para " + TipoDeVehiculo + " " + Marca + " " + Modelo + " " + Linea;
             enviando.EnviarCorreo(Correo, msg, Nombre, MensajeTipo, archivo, titulo, Paso1, Paso2,Paso3, Link1, Link2, Link3);
             EnvioDeCorreoRapido.LimpiarArchivo(archivo);

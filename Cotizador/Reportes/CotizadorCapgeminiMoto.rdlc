@@ -434,7 +434,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -555,13 +554,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>="Q. " &amp; Trim(Format(Sum(Fields!MotoDeduciblePorDañosyAccidentes.Value),"#,##0.00"))</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -627,13 +628,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>="Q. " &amp; Trim(Format(Sum(Fields!MotoDeducibleRobo.Value),"#,##0.00"))</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -1063,7 +1066,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SOLO APLICA si es colaborador de CITI</Value>
+                              <Value>SOLO APLICA si es colaborador de CAPGEMINI</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>

@@ -97,7 +97,7 @@ namespace Cotizador
                 ChartControl1.Legend.Width = 140;
                 ChartControl1.ToolTip = "Cotizaciones Realizadas por Mes";
                 this.Chart1.Visible = true;
-                this.Chart1.ImageUrl = "http://cotizador.unitypromotores.com/Cotizador/imagenes/NoData.png";
+                this.Chart1.ImageUrl = "http://localhost/Estadisticas/imagenes/NoData.png";
                 this.Chart1.ToolTip = "Cotizaciones Realizadas por Mes";
             }
             else
@@ -158,7 +158,7 @@ namespace Cotizador
                 ChartControl2.Legend.Width = 140;
                 this.Chart2.Visible = true;
                 ChartControl2.ToolTip = "Cierres Reales por Mes";
-                this.Chart2.ImageUrl = "http://cotizador.unitypromotores.com/Cotizador/imagenes/NoData.png";
+                this.Chart2.ImageUrl = "http://localhost/Estadisticas/imagenes/NoData.png";
                 this.Chart2.ToolTip = "Cierres Reales por Mes";
             }
             else
@@ -225,7 +225,7 @@ namespace Cotizador
                 ChartControl3.Legend.Width = 140;
                 ChartControl3.ToolTip = "Cierres Abandonados por Mes";
                 this.Chart3.Visible = true;
-                this.Chart3.ImageUrl = "http://cotizador.unitypromotores.com/Cotizador/imagenes/NoData.png";
+                this.Chart3.ImageUrl = "http://localhost/Estadisticas/imagenes/NoData.png";
                 this.Chart3.ToolTip = "Cierres Abandonados por Mes";
               
             }
@@ -844,7 +844,7 @@ namespace Cotizador
         {
             string path = HttpContext.Current.Request.PhysicalApplicationPath;
             Cotizadores.LimpiarGraficas(path);
-            Response.Redirect("CS.aspx");
+            Response.Redirect("http://192.168.81.41/Estadisticas/CS.aspx");
         }
     }
 }

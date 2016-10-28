@@ -42,10 +42,10 @@
                         <asp:ScriptManager ID="ScriptManager1" runat="server">
                                     </asp:ScriptManager>
                         <table>
-                            <tr style="background-color: dodgerblue"><td colspan="3"><a style="color:white; font-size: x-large; font-weight: bold;">De que Año quiere ver la información:
+                            <tr style="background-color: SteelBlue"><td colspan="3"><a style="color:white; font-size: x-large; font-weight: bold;">De que Año quiere ver la información:
                                 <asp:TextBox ID="txtAño" runat="server" Font-Size="X-Large" TextMode="Number" Font-Bold="False" Font-Names="Candara" Height="23px" Width="85px"></asp:TextBox>
                                 </a></td></tr>
-                            <tr style="background-color: dodgerblue">
+                            <tr style="background-color: SteelBlue">
                                 <td colspan="2">
                                     <a style="color:white; font-size: x-large; font-weight: bold;">De que Empresa :</a>
                                     <asp:DropDownList ID="cmbEmpresas" runat="server" Height="35px" OnSelectedIndexChanged="cmbEmpresas_SelectedIndexChanged" Width="310px" AutoPostBack="False" onclick="MostrarSeleccion();" Font-Bold="False" Font-Names="Candara" Font-Size="X-Large">
@@ -57,7 +57,7 @@
                                     </td>
 
                             </tr>
-                            <tr style="background-color: dodgerblue">
+                            <tr style="background-color: SteelBlue">
                                 <td>
                                     <asp:Button ID="btnPie" runat="server" Text="Pie Chart Anual" OnClick="btnPie_Click" Width="150px" />
                                    </td>
@@ -66,11 +66,11 @@
                                     <td>
                                         <asp:Button ID="btnBar" runat="server" Text="Bar Graph Anual" OnClick="btnBar_Click" Width="150px" /></td>
                             </tr>
-                            <tr style="background-color: aquamarine">
-                                <td>Fecha Inicial : 
+                            <tr style="background-color: SteelBlue">
+                                <td><a style="color:white">Fecha Inicial :</a> 
                                     <asp:HiddenField ID="HiddenField1" runat="server" />
                                     <input id="FechaIni" type="date" onchange="LlenarFechaIni()" /></td>
-                                <td>Fecha Final : 
+                                <td><a style="color:white">Fecha Final : </a>
                                     <asp:HiddenField ID="HiddenField2" runat="server" />
                                     <input id="FechaFin" type="date" onchange="LlenarFechaFin()" />
                                 </td>
@@ -88,11 +88,12 @@
                 <tr>
                     <td>
                         <asp:Image ID="Chart1" runat="server" />
-                        <Web:ChartControl ID="ChartControl1" runat="server" BorderStyle="Outset" BorderWidth="5px" Height="550px" Width="864px" ChartPadding="30" GridLines="Both" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0">
-                            <Border Color="CornflowerBlue" />
-                            <Background Color="CornflowerBlue" Angle="90" EndPoint="100, 400" ForeColor="#80FF80" Type="LinearGradient"></Background>
+                         <Web:ChartControl ID="ChartControl1" runat="server" BorderStyle="Solid" BorderWidth="1px" Height="550px" Width="864px" ChartPadding="30" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0" LeftChartPadding="2" Padding="2">
+                            <Border LineJoin="Round" />
 
-                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" Type="LinearGradient" />
+<Background Color="#000099" ForeColor="White"></Background>
+
+                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" LinearGradientMode="ForwardDiagonal" />
 
                             <ChartTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 10pt, style=Bold" ForeColor="White"></ChartTitle>
 
@@ -104,27 +105,47 @@
 
                             <YTitle StringFormat="Near,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold" ForeColor="SteelBlue"></YTitle>
                         </Web:ChartControl>
+                    
+                        
+                    
+                        <cc1:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server" Enabled="True" TargetControlID="ChartControl2">
+                        </cc1:RoundedCornersExtender>
+                    
+                        
+                    
+                        <cc1:RoundedCornersExtender ID="RoundedCornersExtender3" runat="server" Enabled="True" TargetControlID="ChartControl2">
+                        </cc1:RoundedCornersExtender>
+                    
+                    
+                        <cc1:RoundedCornersExtender ID="RoundedCornersExtender1" runat="server" Enabled="True" TargetControlID="ChartControl2">
+                        </cc1:RoundedCornersExtender>
+                    
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Image ID="Chart2" runat="server" />
-                        <Web:ChartControl ID="ChartControl2" runat="server" BorderStyle="Outset" BorderWidth="5px" Height="550px" Width="864px" ChartPadding="30" GridLines="Both" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0" Padding="13">
-                            <Border Color="222, 186, 132" Width="2" />
-                            <Background Color="#000084" Angle="90" EndPoint="100, 400" ForeColor="Gainsboro" Type="LinearGradient" HatchStyle="DiagonalBrick"></Background>
+                         <Web:ChartControl ID="ChartControl2" runat="server" BorderStyle="Solid" BorderWidth="1px" Height="550px" Width="864px" ChartPadding="30" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0" LeftChartPadding="2" Padding="2">
+                            <Border LineJoin="Round" />
 
-                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" Color="#EEEEEE" />
+<Background Color="#000099" ForeColor="White"></Background>
 
-                            <ChartTitle StringFormat="Near,Near,Character,LineLimit" Font="Verdana, 10pt, style=Bold" ForeColor="DeepSkyBlue"></ChartTitle>
+                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" LinearGradientMode="ForwardDiagonal" />
 
-                            <XAxisFont StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="115, 138, 156"></XAxisFont>
+                            <ChartTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 10pt, style=Bold" ForeColor="White"></ChartTitle>
 
-                            <YAxisFont StringFormat="Far,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="115, 138, 156"></YAxisFont>
+                            <XAxisFont StringFormat="Center,Near,Character,LineLimit"></XAxisFont>
 
-                            <XTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="White"></XTitle>
+                            <YAxisFont StringFormat="Far,Near,Character,LineLimit"></YAxisFont>
 
-                            <YTitle StringFormat="Center,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold" ForeColor="White"></YTitle>
+                            <XTitle StringFormat="Center,Far,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="SteelBlue"></XTitle>
+
+                            <YTitle StringFormat="Near,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold" ForeColor="SteelBlue"></YTitle>
                         </Web:ChartControl>
+                    
+                        
+                    
+                        
                         <cc1:RoundedCornersExtender ID="ChartControl2_RoundedCornersExtender" runat="server" Enabled="True" TargetControlID="ChartControl2">
                         </cc1:RoundedCornersExtender>
                     </td>
@@ -133,30 +154,29 @@
                <tr>
                     <td>
                          <asp:Image ID="Chart3" runat="server" />
-                        <Web:ChartControl ID="ChartControl3" runat="server" BorderStyle="Outset" BorderWidth="5px" Height="550px" Width="864px" ChartPadding="30" GridLines="Both" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0" Padding="13">
-                            <Border Color="51, 102, 102" Width="2" />
-                            <Background Color="#336666" EndPoint="500, 500" ForeColor="SteelBlue" Type="LinearGradient" HatchStyle="DiagonalBrick"></Background>
+                             <Web:ChartControl ID="ChartControl3" runat="server" BorderStyle="Solid" BorderWidth="1px" Height="550px" Width="864px" ChartPadding="30" HasChartLegend="False" ShowTitlesOnBackground="False" TopPadding="20" YCustomEnd="0" YCustomStart="0" YValuesInterval="0" LeftChartPadding="2" Padding="2">
+                            <Border LineJoin="Round" />
 
-                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" />
+<Background Color="#000099" ForeColor="White"></Background>
 
-                            <ChartTitle StringFormat="Near,Near,Character,LineLimit" Font="Verdana, 10pt, style=Bold" ForeColor="DeepSkyBlue"></ChartTitle>
+                            <PlotBackground Angle="90" EndPoint="100, 400" ForeColor="#FFFFC0" LinearGradientMode="ForwardDiagonal" />
 
-                            <XAxisFont StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="115, 138, 156"></XAxisFont>
+                            <ChartTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 10pt, style=Bold" ForeColor="White"></ChartTitle>
 
-                            <YAxisFont StringFormat="Far,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="115, 138, 156"></YAxisFont>
+                            <XAxisFont StringFormat="Center,Near,Character,LineLimit"></XAxisFont>
 
-                            <XTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="White"></XTitle>
+                            <YAxisFont StringFormat="Far,Near,Character,LineLimit"></YAxisFont>
 
-                            <YTitle StringFormat="Center,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold" ForeColor="White"></YTitle>
+                            <XTitle StringFormat="Center,Far,Character,LineLimit" Font="Tahoma, 8pt, style=Bold" ForeColor="SteelBlue"></XTitle>
+
+                            <YTitle StringFormat="Near,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold" ForeColor="SteelBlue"></YTitle>
                         </Web:ChartControl>
+                    
                     </td>
 
                 </tr>
 
             </table>
-
-
-
 
         </div>
     </form>

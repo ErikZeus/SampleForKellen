@@ -1098,6 +1098,78 @@ namespace Cotizador
 
             return resultado;
         }
+        public static decimal ObtieneValor_DeducibleMinimoRoboMoto(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoRoboMoto from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+        public static decimal ObtieneValor_DeducibleMinimoDañosMoto(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoDañosMoto from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+        public static decimal ObtieneValor_PorcentajeDeducibleMinimoRoboMoto(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select PorcentajeDeducibleMinimoRoboMoto from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+        public static decimal ObtieneValor_PorcentajeDeducibleMinimoDañosMoto(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select PorcentajeDeducibleMinimoDañosMoto from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+
         public static decimal ObtieneValor_Mensualidades(string Codigo)
         {
             decimal resultado = 0;
@@ -1115,42 +1187,6 @@ namespace Cotizador
 
             return resultado;
         }
-
-        public static decimal ObtieneValor_DeducibleMinimoParcial(string Codigo)
-        {
-            decimal resultado = 0;
-
-            DataTable content = new DataTable();
-            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoParcial from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
-            DataView dv = new DataView(content);
-            foreach (DataRow rw in content.Rows)
-            {
-                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
-                {
-                    resultado = decimal.Parse(rw[0].ToString());
-                }
-            }
-
-            return resultado;
-        }
-        public static decimal ObtieneValor_DeducibleMinimoRobo(string Codigo)
-        {
-            decimal resultado = 0;
-
-            DataTable content = new DataTable();
-            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoRobo from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
-            DataView dv = new DataView(content);
-            foreach (DataRow rw in content.Rows)
-            {
-                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
-                {
-                    resultado = decimal.Parse(rw[0].ToString());
-                }
-            }
-
-            return resultado;
-        }
-
 
         public static decimal ObtieneValor_deducible_parcial(string Codigo)
         {
@@ -1189,6 +1225,7 @@ namespace Cotizador
             {
                 return DeducibleMinimoRobo * porcentaje_general;
             }
+
 
             DataTable content = new DataTable();
             content = AccesoDatos.RegresaTablaMySql("Select Año, MayorMenor, Porcentaje, TipoVehiculo from maestro_reglasdevehiculos where Marca = '" + codigo_marca + "' and upper(linea) = upper('" + linea + "')");
@@ -1239,6 +1276,44 @@ namespace Cotizador
 
             return resultado;
         }
+
+        public static decimal ObtieneValor_DeducibleMinimoRobo(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoRobo from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+        public static decimal ObtieneValor_DeducibleMinimoParcial(string Codigo)
+        {
+            decimal resultado = 0;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("Select DeducibleMinimoParcial from maestro_reglasnegocio where CodigoEmpresa = '" + Codigo + "'");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = decimal.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
+
 
         public static decimal ObtieneValor_Asisto(string Codigo)
         {
@@ -1629,6 +1704,8 @@ namespace Cotizador
         /// <param name="MensajeTipo"></param>
         public Valores(string _Codigo, decimal _SumaAsegurada, bool _roboParcial, bool _MenoresDesde16, bool _MenoresDesde18, bool _ExcesoRC, decimal _RoboTotal, int MensajeTipo)
         {
+
+
             decimal equipo_especial = 0;
             decimal cien = 100;
             decimal mil = 1000;
@@ -1646,6 +1723,10 @@ namespace Cotizador
             decimal emision = 0;
             decimal PorcenajeGastosPorEmision = Cotizadores.ObtieneValor_GastosEmision(_Codigo);
             decimal Mensualidades = Cotizadores.ObtieneValor_Mensualidades(_Codigo);
+            decimal DeducibleMinimoRoboMoto = Cotizadores.ObtieneValor_DeducibleMinimoRoboMoto(_Codigo);
+            decimal DeducibleMinimoDañosMoto = Cotizadores.ObtieneValor_DeducibleMinimoDañosMoto(_Codigo);
+            decimal PorcentajeDeducibleMinimoRoboMoto = Cotizadores.ObtieneValor_PorcentajeDeducibleMinimoRoboMoto(_Codigo);
+            decimal PorcentajeDeducibleMinimoDañosMoto = Cotizadores.ObtieneValor_PorcentajeDeducibleMinimoDañosMoto(_Codigo);
 
             decimal DeducibleMinimoParcial = Cotizadores.ObtieneValor_DeducibleMinimoParcial(_Codigo);
             deducible_parcial = Cotizadores.ObtieneValor_deducible_parcial(_Codigo);
@@ -1656,7 +1737,6 @@ namespace Cotizador
             {
                 deducible_parcial = _SumaAsegurada * deducible_parcial;
             }
-
 
 
             deducible_robo_total = _RoboTotal;
@@ -1776,6 +1856,22 @@ namespace Cotizador
 
                 }
 
+
+                 MotoDeducibles_Robo = SumaAsegurada * PorcentajeDeducibleMinimoRoboMoto / 100;
+                if (MotoDeducibles_Robo < DeducibleMinimoRoboMoto)
+                {
+                    MotoDeducibles_Robo = DeducibleMinimoRoboMoto;
+                }
+
+                MotoDeduciblesPorDañosyAccidentes = SumaAsegurada * PorcentajeDeducibleMinimoDañosMoto / 100;
+
+                if (MotoDeduciblesPorDañosyAccidentes < DeducibleMinimoDañosMoto)
+                {
+                    MotoDeduciblesPorDañosyAccidentes = DeducibleMinimoDañosMoto;
+                }
+
+
+
             }
 
             if (MensajeTipo == 8)
@@ -1868,6 +1964,8 @@ namespace Cotizador
             MenoresDesde16 = decimal.Parse(MenoresDesde16.ToString("F", CultureInfo.InvariantCulture));
             MenoresDesde18 = decimal.Parse(MenoresDesde18.ToString("F", CultureInfo.InvariantCulture));
             ExcesoRC = decimal.Parse(ExcesoRC.ToString("F", CultureInfo.InvariantCulture));
+
+      
 
         }
 

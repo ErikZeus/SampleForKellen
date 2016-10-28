@@ -139,6 +139,33 @@ namespace Cotizador {
         protected global::WebChart.ChartControl ChartControl1;
         
         /// <summary>
+        /// RoundedCornersExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender2;
+        
+        /// <summary>
+        /// RoundedCornersExtender3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender3;
+        
+        /// <summary>
+        /// RoundedCornersExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender1;
+        
+        /// <summary>
         /// Chart2 control.
         /// </summary>
         /// <remarks>

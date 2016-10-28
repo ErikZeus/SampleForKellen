@@ -397,7 +397,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -446,13 +445,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Q.30,000.00 por persona hasta el límite de ocupantes que lea la tarjeta de circulación</Value>
+                              <Value>EXCLUIDO</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox58</rd:DefaultName>
@@ -518,13 +519,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>="Q. " &amp; Trim(Format(Sum(Fields!MotoDeduciblePorDañosyAccidentes.Value),"#,##0.00"))</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -590,13 +593,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>="Q. " &amp; Trim(Format(Sum(Fields!MotoDeducibleRobo.Value),"#,##0.00"))</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -611,6 +616,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1026,7 +1032,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SOLO APLICA si es colaborador de CITI</Value>
+                              <Value>SOLO APLICA si es colaborador de TELUS</Value>
                               <Style>
                                 <FontFamily>Candara</FontFamily>
                               </Style>
@@ -1298,45 +1304,6 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.39583in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox250">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>La póliza  de este programa tiene vigencia del 01/08/2016 al 01/08/2017,  por lo cual la prima y el número de pagos variará dependiendo de la fecha de inclusión de su vehículo.</Value>
-                              <Style>
-                                <FontFamily>Candara</FontFamily>
-                                <Color>DarkBlue</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox250</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                    <ColSpan>2</ColSpan>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell />
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
               <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
@@ -1441,13 +1408,12 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>CotizadorRoble</DataSetName>
         <Top>1.12375in</Top>
         <Left>0.28in</Left>
-        <Height>6.97916in</Height>
+        <Height>6.58333in</Height>
         <Width>7.34376in</Width>
         <Style>
           <Border>

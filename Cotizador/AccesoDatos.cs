@@ -16,89 +16,13 @@ using System.IO;
 using System.Web.Configuration;
 using System.Net.Mail;
 using System.Xml;
-using Npgsql;
 using MySql;
 
 namespace Cotizador
 {
     public class AccesoDatos
     {
-        public string  EjecutaQueryNpgsql(string _sql)
-        {
-
-            string msg = "";
-            try
-            {
-                NpgsqlConnection cnn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cnnPostgres"].ToString());
-                // Define a query
-                NpgsqlCommand cmd = new NpgsqlCommand(_sql, cnn);
-                cmd.CommandType = CommandType.Text;
-                cnn.Open();
-                cmd.ExecuteNonQuery();
-                cnn.Close();
-                return "Terminado";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message.ToString() ;
-            }
-        }
-        public string EjecutaQueryRegresaCadenaNpgsql(string _sql)
-        {
-            DataTable content = new DataTable();
-            string retorna = "";
-
-            try
-            {
-                NpgsqlConnection cnn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cnnPostgres"].ToString());
-                // Define a query
-                NpgsqlCommand cmd = new NpgsqlCommand(_sql, cnn);
-                NpgsqlDataAdapter adpt = new NpgsqlDataAdapter(cmd);
-
-                cmd.CommandType = CommandType.Text;
-                cnn.Open();
-                adpt.Fill(content);
-                cnn.Close();
-
-                foreach (DataRow rw in content.Rows)
-	            {
-                    retorna = rw[0].ToString();
-                    break;
-	           }
-
-
-                return retorna;
-            }
-            catch (Exception ex)
-            {
-              return  "Error: " + ex.Message.ToString();
-            }
-        }
-        public DataTable  RegresaTablaNpqsql(string _sql)
-        {
-            DataTable content = new DataTable();
-            string msg = "";
-            try
-            {
-                NpgsqlConnection cnn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["cnnPostgres"].ToString());
-                // Define a query
-                NpgsqlCommand cmd = new NpgsqlCommand(_sql, cnn);
-                NpgsqlDataAdapter adpt = new NpgsqlDataAdapter(cmd);
-
-                cmd.CommandType = CommandType.Text;
-                cnn.Open();
-                adpt.Fill(content);
-                cnn.Close();
-
-                return content;
-            }
-            catch (Exception ex)
-            {
-                return content;
-            }
-    
-          
-        }
+ 
         public static string RegresaCadena_1_ResultadoMysql(string sql)
         {
 
