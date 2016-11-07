@@ -242,10 +242,13 @@ namespace Cotizador
                 }
 
             }
-            ///Mejor ubicacion logica para darle mantenimiento a los pdf de Documentos.
-            string path = HttpContext.Current.Request.PhysicalApplicationPath;
-            Cotizadores.LimpiarDocumentos(path);
 
+
+
+            ///Mejor ubicacion logica para darle mantenimiento a los pdf de Documentos.
+            //string path = HttpContext.Current.Request.PhysicalApplicationPath;
+            //Cotizadores.LimpiarDocumentos(path);
+        
         }
     }
 }

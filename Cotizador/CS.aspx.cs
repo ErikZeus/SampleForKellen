@@ -218,7 +218,7 @@ namespace Cotizador
                 string _id = this.txtId.Text;
                 HttpContext context = HttpContext.Current;
                 context.Session["Id"] = _id;
-                Response.Redirect("../Cotizador/Rpt25.aspx");
+                Response.Redirect("Rpt25.aspx");
             }
             catch (Exception)
             {
@@ -231,12 +231,12 @@ namespace Cotizador
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Cotizador/Rpt26.aspx");
+            Response.Redirect("Rpt26.aspx");
         }
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Cotizador/Grafica1.aspx");
+            Response.Redirect("Grafica1.aspx");
         }
 
         protected void Button6_Click(object sender, EventArgs e)

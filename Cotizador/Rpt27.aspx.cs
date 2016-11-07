@@ -17,7 +17,7 @@ namespace Cotizador
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Grafica1.aspx");
+            Response.Redirect("http://192.168.81.41/Estadisticas/Grafica1.aspx");
         }
     }
 }

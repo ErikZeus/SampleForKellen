@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Cotización El Roble</title>
-    <link rel="stylesheet" type="text/css" href="http://cotizador.unitypromotores.com/Cotizador/css/Formulario1.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost/Cotizador/css/Formulario1.css" />
     <style type="text/css">
         .centro {
             display: inline-block;

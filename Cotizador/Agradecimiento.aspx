@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <div style="background-image:url('http://cotizador.unitypromotores.com/Cotizador/imagenes/Agradecimiento/Agradecimiento1.jpg'); height: 862px; background-size:contain; background-repeat: no-repeat; background-attachment: fixed; width: 562px;">
+         <div style="background-image:url('http://localhost/Cotizador/imagenes/Agradecimiento/Agradecimiento1.jpg'); height: 862px; background-size:contain; background-repeat: no-repeat; background-attachment: fixed; width: 562px;">
             <table style="width:562px;">
                 <tr><td colspan="2">
                     &nbsp;</td></tr>
