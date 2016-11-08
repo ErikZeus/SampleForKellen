@@ -145,13 +145,13 @@ namespace Cotizador
              mail.IsBodyHtml = true;
              mail.Priority = MailPriority.High;
              SmtpClient client = new SmtpClient();
-             //Add the Creddentials- use your own email id and password
+            //Add the Creddentials- use your own email id and password
 
-             client.Credentials = new System.Net.NetworkCredential(from, "Kellen2014");
+            client.Credentials = new System.Net.NetworkCredential(from, "Unity2016");
 
-             client.Port = 587; // Gmail works on this port
-             client.Host = "smtp.gmail.com";
-             client.EnableSsl = true; //Gmail works on Server Secured Layer
+            client.Port = 587; // Gmail works on this port
+            client.Host = "smtp.office365.com";
+            client.EnableSsl = true; //Gmail works on Server Secured Layer
 
              try
              {

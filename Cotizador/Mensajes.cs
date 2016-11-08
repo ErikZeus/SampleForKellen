@@ -290,5 +290,31 @@ namespace Cotizador
         // member will be accessed by multiple threads.
         private volatile bool _shouldStop;
     }
+    public class ActualizacionFecha
+    {
+
+        public string Para = "";
+        public string Nombre = "";
+        public string Descripcion = "";
+        public string Titulo = "";
+
+        // This method will be called when the thread is started.
+        public void DoWork()
+        {
+
+            Correo enviando = new Correo();
+            string titulo = Titulo;
+            enviando.EnviarAviso(Para, Nombre, Descripcion, Titulo);
+
+
+        }
+        public void RequestStop()
+        {
+            _shouldStop = true;
+        }
+        // Volatile is used as hint to the compiler that this data
+        // member will be accessed by multiple threads.
+        private volatile bool _shouldStop;
+    }
 
 }

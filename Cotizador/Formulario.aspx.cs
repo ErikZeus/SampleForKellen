@@ -29,6 +29,7 @@ namespace Cotizador
             this.cmbTipoVehiculo.DataTextField = "Descripcion";
             this.cmbTipoVehiculo.DataSource = Cotizar.LlenaComboTipoVehiculo();
             this.cmbTipoVehiculo.DataBind();
+         
 
             //this.cmbLinea.DataValueField = "indice";
             //this.cmbLinea.DataTextField = "Descripcion";

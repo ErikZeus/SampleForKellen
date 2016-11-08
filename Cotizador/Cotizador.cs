@@ -32,6 +32,51 @@ namespace Cotizador
 
         }
 
+        public DataView LlenaComboEmpresaProRata()
+        {
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("select indice, CodigoEmpresa from empresas_prorrata order by CodigoEmpresa");
+            DataView dv = new DataView(content);
+            return dv;
+
+        }
+
+        public DataView LlenaComboNombreEjecutivo()
+        {
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("select Nombre, Correo from maestro_ejecutivos order by Nombre");
+            DataView dv = new DataView(content);
+            return dv;
+
+        }
+        public DataView LlenaComboNombreEmpresas()
+        {
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("select indice, CodigoEmpresa from maestro_reglasnegocio order by CodigoEmpresa");
+            DataView dv = new DataView(content);
+            return dv;
+
+        }
+        public  string ObtieneFechaVigencia(string _CodigoEmpresa)
+        {
+            string resultado = "";
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("select ifnull(vigencia,'') from empresas_prorrata where CodigoEmpresa = '"+ _CodigoEmpresa +"'" );
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = rw[0].ToString();
+                }
+            }
+
+            return resultado;
+        }
+
         public static List<CorreosInternos> EnviarCorreosInternos(string CodigoEmpresa)
         {
 
@@ -386,8 +431,39 @@ namespace Cotizador
             return dv;
 
         }
+        public void ActualizarFecha(string Correo, string Fecha , string CodigoEmpresa)
+        {
+            ActualizacionFecha mailbox = new ActualizacionFecha();
+            mailbox.Nombre = "";
+            mailbox.Para = Correo;
+            mailbox.Descripcion = "Reporte de actividad en Vigencia de Seguro para la empresa " + CodigoEmpresa + " se ha actualizado para la fecha " + Fecha + ".  Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
+            mailbox.Titulo = "Actualización de Vigencia para " + CodigoEmpresa;
+            AccesoDatos.EjecutaQueryMySql("update empresas_prorrata set  vigencia = '"+ Fecha.Replace("-","/") +"'   where CodigoEmpresa = '"+ CodigoEmpresa +"'");
+          //  mailbox.DoWork();
+          
+        }
+        public void AgregarEmpresaProrateo(string Correo, string CodigoEmpresa)
+        {
+            ActualizacionFecha mailbox = new ActualizacionFecha();
+            mailbox.Nombre = "";
+            mailbox.Para = Correo;
+            mailbox.Descripcion = "Reporte de actividad se agrego la empresa " + CodigoEmpresa + " para calculo de prorateo. Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
+            mailbox.Titulo = "Se agrego la empresa " + CodigoEmpresa + " al calculo del prorateo";
+            AccesoDatos.EjecutaQueryMySql("insert into empresas_prorrata(CodigoEmpresa, TipoProRata)values('"+ CodigoEmpresa +"','Normal')" );
+            //  mailbox.DoWork();
 
+        }
+        public void QuitarEmpresaProrateo(string Correo, string CodigoEmpresa)
+        {
+            ActualizacionFecha mailbox = new ActualizacionFecha();
+            mailbox.Nombre = "";
+            mailbox.Para = Correo;
+            mailbox.Descripcion = "Reporte de actividad se quito la empresa " + CodigoEmpresa + " para calculo de prorateo. Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
+            mailbox.Titulo = "Se quito a la empresa " + CodigoEmpresa + " del calculo del prorateo";
+            AccesoDatos.EjecutaQueryMySql("delete from empresas_prorrata where CodigoEmpresa = '" + CodigoEmpresa + "'");
+            //  mailbox.DoWork();
 
+        }
 
         public StringBuilder ObtieneMensaje(int MensajeTipo)
         {
