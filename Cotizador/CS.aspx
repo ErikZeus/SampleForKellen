@@ -8,7 +8,7 @@
 <head runat="server">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://localhost/Estaditicas/css/Formulario1.css" />
+    <link rel="stylesheet" type="text/css" href="http://cotizador.unitypromotores.com/Estaditicas/css/Formulario1.css" />
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
     <title></title>
     <style type="text/css">

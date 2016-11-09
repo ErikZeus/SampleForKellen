@@ -16,7 +16,7 @@ namespace Cotizador
            // Attachment data = new Attachment(AtachmentPath);
             //Attachment data1 = new Attachment(archivo);
 
-            string from = "erik.castaneda@unitypromotores.com"; 
+            string from = "cotizaciononline@unitypromotores.com"; 
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
             mail.To.Add(_to);
             mail.From = new MailAddress(from, titulo, System.Text.Encoding.UTF8);
@@ -32,7 +32,7 @@ namespace Cotizador
             SmtpClient client = new SmtpClient();
             //Add the Creddentials- use your own email id and password
 
-            client.Credentials = new System.Net.NetworkCredential(from, "Unity2016");
+            client.Credentials = new System.Net.NetworkCredential(from, "bzvrgvqUJ5kr4CRE");
 
             //client.Port = 587; // Gmail works on this port
             //client.Host = "smtp.gmail.com";
@@ -134,7 +134,7 @@ namespace Cotizador
          public void EnviarAviso(string Para,string  Nombre,string Descripcion, string Titulo)
          {
 
-             string from = "erik.castaneda@unitypromotores.com";
+             string from = "cotizaciononline@unitypromotores.com";
              System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
              mail.To.Add(Para);
              mail.From = new MailAddress(from, Titulo, System.Text.Encoding.UTF8);
@@ -147,7 +147,7 @@ namespace Cotizador
              SmtpClient client = new SmtpClient();
             //Add the Creddentials- use your own email id and password
 
-            client.Credentials = new System.Net.NetworkCredential(from, "Unity2016");
+            client.Credentials = new System.Net.NetworkCredential(from, "bzvrgvqUJ5kr4CRE");
 
             client.Port = 587; // Gmail works on this port
             client.Host = "smtp.office365.com";

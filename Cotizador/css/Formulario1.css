@@ -34,14 +34,14 @@
     left: 0px;
 }
 .bkground {
-     background-image: url("http://localhost/Cotizador/imagenes/FondoCarro.jpg"); 
+     background-image: url("http://cotizador.unitypromotores.com/Cotizador/imagenes/FondoCarro.jpg"); 
 }
 
         .inner-container {
             display: table-cell;
             vertical-align: middle;
             text-align: center;
-            background-image: url("http://localhost/Cotizador/imagenes/FondoCarro.jpg")  ; 
+            background-image: url("http://cotizador.unitypromotores.com/Cotizador/imagenes/FondoCarro.jpg")  ; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

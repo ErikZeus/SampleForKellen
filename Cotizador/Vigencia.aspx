@@ -7,7 +7,7 @@
     <title>Empresas con ProRateo</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://localhost/Cotizador/css/Formulario1.css" />
+    <link rel="stylesheet" type="text/css" href="http://cotizador.unitypromotores.com/Cotizador/css/Formulario1.css" />
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
 <style type="text/css">
 table.altrowstable {
