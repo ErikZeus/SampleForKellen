@@ -101,7 +101,7 @@ table.altrowstable th {
                             </td>
                             <td class="borderunique"><a>Empresas :</a></td>
                             <td class="borderunique">
-                                <asp:DropDownList ID="cmbEmpresasProRata" runat="server" Height="33px" OnSelectedIndexChanged="cmbEmpresasProRata_SelectedIndexChanged" Width="151px">
+                                <asp:DropDownList ID="cmbEmpresasProRata" runat="server" Height="33px" OnSelectedIndexChanged="cmbEmpresasProRata_SelectedIndexChanged" Width="151px" AutoPostBack="True">
                                 </asp:DropDownList>
                             </td>
                             <td></td>

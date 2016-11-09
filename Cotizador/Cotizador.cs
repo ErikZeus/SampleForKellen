@@ -439,7 +439,7 @@ namespace Cotizador
             mailbox.Descripcion = "Reporte de actividad en Vigencia de Seguro para la empresa " + CodigoEmpresa + " se ha actualizado para la fecha " + Fecha + ".  Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
             mailbox.Titulo = "Actualización de Vigencia para " + CodigoEmpresa;
             AccesoDatos.EjecutaQueryMySql("update empresas_prorrata set  vigencia = '"+ Fecha.Replace("-","/") +"'   where CodigoEmpresa = '"+ CodigoEmpresa +"'");
-          //  mailbox.DoWork();
+            mailbox.DoWork();
           
         }
         public void AgregarEmpresaProrateo(string Correo, string CodigoEmpresa)
@@ -450,7 +450,7 @@ namespace Cotizador
             mailbox.Descripcion = "Reporte de actividad se agrego la empresa " + CodigoEmpresa + " para calculo de prorateo. Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
             mailbox.Titulo = "Se agrego la empresa " + CodigoEmpresa + " al calculo del prorateo";
             AccesoDatos.EjecutaQueryMySql("insert into empresas_prorrata(CodigoEmpresa, TipoProRata)values('"+ CodigoEmpresa +"','Normal')" );
-            //  mailbox.DoWork();
+            mailbox.DoWork();
 
         }
         public void QuitarEmpresaProrateo(string Correo, string CodigoEmpresa)
@@ -461,7 +461,7 @@ namespace Cotizador
             mailbox.Descripcion = "Reporte de actividad se quito la empresa " + CodigoEmpresa + " para calculo de prorateo. Si usted no ha hecho el cambio por favor reportelo a su Jefe Inmediato.  Gracias.";
             mailbox.Titulo = "Se quito a la empresa " + CodigoEmpresa + " del calculo del prorateo";
             AccesoDatos.EjecutaQueryMySql("delete from empresas_prorrata where CodigoEmpresa = '" + CodigoEmpresa + "'");
-            //  mailbox.DoWork();
+            mailbox.DoWork();
 
         }
 
@@ -1268,6 +1268,24 @@ namespace Cotizador
 
             return resultado;
         }
+        public static DateTime Obtiene_Vigencia(string Codigo)
+        {
+            DateTime resultado = DateTime.Now;
+
+            DataTable content = new DataTable();
+            content = AccesoDatos.RegresaTablaMySql("select vigencia from empresas_prorrata where CodigoEmpresa ='"+ Codigo +"' ");
+            DataView dv = new DataView(content);
+            foreach (DataRow rw in content.Rows)
+            {
+                if (rw[0].ToString() != null && rw[0].ToString().Trim() != "")
+                {
+                    resultado = DateTime.Parse(rw[0].ToString());
+                }
+            }
+
+            return resultado;
+        }
+
 
 
         public static decimal ObtieneValor_Mensualidades(string Codigo)
@@ -1948,6 +1966,8 @@ namespace Cotizador
 
                         emision = (MotoSumaLimiteParaCalculo * MotoPorcentaje_PorServicio) / 100;
                         PrimaNeta = MotoSumaLimiteParaCalculo + emision + MotoCobro_PorServicio;
+                        GastosPorEmision = PrimaNeta * PorcenajeGastosPorEmision;
+                        PrimaNeta = PrimaNeta + GastosPorEmision;
                         Iva = PrimaNeta * CalculoIva;
                         PrimaNeta = PrimaNeta + Iva;
 
@@ -1956,6 +1976,8 @@ namespace Cotizador
                     {
 
                         PrimaNeta = ((SumaAsegurada * MotoPorcentaje_PorServicio) / 100) + MotoCobro_PorServicio;
+                        GastosPorEmision = PrimaNeta * PorcenajeGastosPorEmision;
+                        PrimaNeta = PrimaNeta + GastosPorEmision;
                         Iva = PrimaNeta * CalculoIva;
                         PrimaNeta = PrimaNeta + Iva;
 
@@ -2113,11 +2135,11 @@ namespace Cotizador
             decimal DeducibleMinimoDañosMoto = Cotizadores.ObtieneValor_DeducibleMinimoDañosMoto(_Codigo);
             decimal PorcentajeDeducibleMinimoRoboMoto = Cotizadores.ObtieneValor_PorcentajeDeducibleMinimoRoboMoto(_Codigo);
             decimal PorcentajeDeducibleMinimoDañosMoto = Cotizadores.ObtieneValor_PorcentajeDeducibleMinimoDañosMoto(_Codigo);
-
+            System.DateTime Vigencia = Cotizadores.Obtiene_Vigencia(_Codigo);
             System.DateTime olddate = System.DateTime.Today;
             System.DateTime newDate = new System.DateTime(olddate.Year, olddate.Month, 1, 0, 0, 0, olddate.Kind);
             System.DateTime nextyear = newDate.AddYears(1);
-            DiasAnuales = int.Parse((newDate - nextyear).TotalDays.ToString()) * -1;
+            DiasAnuales = int.Parse((Vigencia - olddate).TotalDays.ToString());
             DiasTotales = int.Parse((nextyear - olddate).TotalDays.ToString());
 
 
@@ -2129,21 +2151,25 @@ namespace Cotizador
                     if (((SumaAsegurada * Porcentaje_Menor_100 / 100) + Costo + Asisto) < MontoBase)
                     {
                         PrimaNeta = MontoBase + Costo;
+                        PrimaNeta = (PrimaNeta / 365) * DiasAnuales;
                         GastosPorEmision = PrimaNeta * PorcenajeGastosPorEmision;
+                        Asisto = (Asisto / 365) * DiasAnuales;
                         PrimaNeta = PrimaNeta + GastosPorEmision + Asisto;
                         Iva = PrimaNeta * CalculoIva;
                         PrimaNeta = (PrimaNeta + Iva);
-                        PrimaNetaProRata = PrimaNeta * DiasTotales / DiasAnuales;
+                        PrimaNetaProRata = PrimaNeta;
                         GastosPorEmisionProRata = PrimaNetaProRata * PorcenajeGastosPorEmision;
                     }
                     else
                     {
                         PrimaNeta = ((SumaAsegurada * Porcentaje_Menor_100 / 100) + Costo);
+                        PrimaNeta = (PrimaNeta / 365) * DiasAnuales;
                         GastosPorEmision = PrimaNeta * PorcenajeGastosPorEmision;
+                        Asisto = (Asisto / 365) * DiasAnuales;
                         PrimaNeta = PrimaNeta + GastosPorEmision + Asisto;
                         Iva = PrimaNeta * CalculoIva;
                         PrimaNeta = (PrimaNeta + Iva);
-                        PrimaNetaProRata = PrimaNeta * DiasTotales / DiasAnuales;
+                        PrimaNetaProRata = PrimaNeta;
                         GastosPorEmisionProRata = PrimaNetaProRata * PorcenajeGastosPorEmision;
                     }
 
@@ -2204,21 +2230,28 @@ namespace Cotizador
             {
                 if (((SumaAsegurada * MotoPorcentaje_PorServicio) / 100) + MotoCobro_PorServicio < MotoSumaLimiteParaCalculo)
                 {
+                    //MotoCobro_PorServicio
 
                     emision = (MotoSumaLimiteParaCalculo * MotoPorcentaje_PorServicio) / 100;
                     PrimaNeta = MotoSumaLimiteParaCalculo + emision + MotoCobro_PorServicio;
+                    PrimaNeta = (PrimaNeta / 365) * DiasAnuales;
+                    GastosPorEmision = PrimaNeta * PorcenajeGastosPorEmision;
+                    PrimaNeta = PrimaNeta + GastosPorEmision;
                     Iva = PrimaNeta * CalculoIva;
                     PrimaNeta = PrimaNeta + Iva;
-                    PrimaNetaProRata = PrimaNeta * DiasTotales / DiasAnuales;
+                    PrimaNetaProRata = PrimaNeta;
                     GastosPorEmisionProRata = PrimaNetaProRata * PorcenajeGastosPorEmision;
                 }
                 else
                 {
 
                     PrimaNeta = ((SumaAsegurada * MotoPorcentaje_PorServicio) / 100) + MotoCobro_PorServicio;
+                    PrimaNeta = (PrimaNeta / 365) * DiasAnuales;
+                    GastosPorEmision = PrimaNeta  * PorcenajeGastosPorEmision;
+                    PrimaNeta = PrimaNeta + GastosPorEmision;
                     Iva = PrimaNeta * CalculoIva;
                     PrimaNeta = PrimaNeta + Iva;
-                    PrimaNetaProRata = PrimaNeta * DiasTotales / DiasAnuales;
+                    PrimaNetaProRata = PrimaNeta;
                     GastosPorEmisionProRata = PrimaNetaProRata * PorcenajeGastosPorEmision;
                 }
 

@@ -63,6 +63,7 @@ namespace Cotizador
             {
                 string resultado = cmbEmpresasProRata.SelectedItem.Text.ToString().Trim();
                 this.lblVigencia.Text = Cotizar.ObtieneFechaVigencia(resultado);
+                this.lblVigencia.DataBind();
             }
             else {
                 this.lblVigencia.Text = ".";
